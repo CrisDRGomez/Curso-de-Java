@@ -1,6 +1,6 @@
-package platzi.play.service;
+package service;
 
-import platzi.play.model.Movie;
+import model.Movie;
 
 
 public class MovieService {
@@ -28,11 +28,11 @@ public class MovieService {
                         "Descripción: " + movie.getDescription() + "\n" +
                         "Duración: " + movie.getDuration() + " minutos\n" +
                         "Género: " + movie.getGenere() + "\n" +
-                        "Año: " + movie.getYear() + "\n" +
+                        "Año: " + movie.releaseDate.getYear() + "\n" +
                         "Rating: " + movie.getRating() + "/5\n" +
                         "Disponibilidad: " + (movie.isAvailability() ? "Disponible" : "No disponible") + "\n" +
                         "Productor: " + movie.getProducer() + "\n" +
-                        "Presupuesto: $" + movie.getBudget();
+                        "Presupuesto: $" + movie.getBudget() + " usd";
             }
 
         // Calificar pelicula

@@ -1,4 +1,4 @@
-package platzi.play.service;
+package service;
 
 public class UserServcie {
 

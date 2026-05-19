@@ -1,4 +1,6 @@
-package platzi.play.model;
+package model;
+
+import java.time.LocalDate;
 
 public class Movie {
 
@@ -9,11 +11,11 @@ public class Movie {
     public String description;
     public int duration; // minutes
     public String genere;
-    public int year;
-    public int rating;
+    public double rating;
     public boolean availability;
     public String producer;
     public double budget; // usd
+    public LocalDate releaseDate;
 
     // Constructor vacío
 
@@ -22,12 +24,12 @@ public class Movie {
 
     // Constructor con parámetros
 
-    public Movie(String title, String description, int duration, String genere, int year, int rating, boolean availability, String producer, double budget) {
+        public Movie(String title, String description, int duration, String genere, LocalDate releaseDate, int rating, boolean availability, String producer, double budget) {
         this.title = title;
         this.description = description;
         this.duration = duration;
         this.genere = genere;
-        this.year = year;
+        this.releaseDate = releaseDate;
         this.rating = rating;
         this.availability = availability;
         this.producer = producer;
@@ -68,15 +70,7 @@ public class Movie {
         this.genere = genere;
     }
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 
@@ -108,6 +102,15 @@ public class Movie {
         this.budget = budget;
     }
 
+    public LocalDate getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
+
     //toString
 
     @Override
@@ -117,7 +120,7 @@ public class Movie {
                 ", description='" + description + '\'' +
                 ", duration=" + duration +
                 ", genere='" + genere + '\'' +
-                ", year=" + year +
+                ", year=" + releaseDate +
                 ", rating=" + rating +
                 ", availability=" + availability +
                 ", producer='" + producer + '\'' +
