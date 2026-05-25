@@ -24,7 +24,8 @@ public class MovieService {
 
         // Obtener ficha técnica
             public static String getMovieDetails(Movie movie) {
-                return "Ficha técnica de la pelicula: " + movie.getTitle() + "\n" +
+                return "Ficha técnica de la pelicula \n" +
+                        "Título: " + movie.getTitle() + "\n" +
                         "Descripción: " + movie.getDescription() + "\n" +
                         "Duración: " + movie.getDuration() + " minutos\n" +
                         "Género: " + movie.getGenere() + "\n" +

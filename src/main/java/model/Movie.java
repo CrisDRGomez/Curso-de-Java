@@ -10,30 +10,27 @@ public class Movie {
     public String title;
     public String description;
     public int duration; // minutes
-    public String genere;
+    public String genre;
     public double rating;
     public boolean availability;
     public String producer;
     public double budget; // usd
     public LocalDate releaseDate;
 
-    // Constructor vacío
-
-    public Movie() {
-    }
-
     // Constructor con parámetros
 
-        public Movie(String title, String description, int duration, String genere, LocalDate releaseDate, int rating, boolean availability, String producer, double budget) {
-        this.title = title;
-        this.description = description;
-        this.duration = duration;
-        this.genere = genere;
-        this.releaseDate = releaseDate;
-        this.rating = rating;
-        this.availability = availability;
-        this.producer = producer;
-        this.budget = budget;
+        public Movie(String title, int duration, String genre) {
+            this.title = title;
+            this.duration = duration;
+            this.genre = genre;
+            this.releaseDate = LocalDate.now();
+            this.availability = true;
+    }
+    // Sobrecarga de constructor
+
+    public Movie(String title, int duration, String genre, double rating) {
+        this(title, duration, genre);
+        this.rate(rating);
     }
 
     // Getters and Setters
@@ -63,11 +60,11 @@ public class Movie {
     }
 
     public String getGenere() {
-        return genere;
+        return genre;
     }
 
     public void setGenere(String genere) {
-        this.genere = genere;
+        this.genre = genre;
     }
 
     public double getRating() {
@@ -119,7 +116,7 @@ public class Movie {
                 "  title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", duration=" + duration +
-                ", genere='" + genere + '\'' +
+                ", genere='" + genre + '\'' +
                 ", year=" + releaseDate +
                 ", rating=" + rating +
                 ", availability=" + availability +
@@ -127,4 +124,14 @@ public class Movie {
                 ", budget=" + budget +
                 '}';
     }
-}
+
+    // Métodos
+
+    public void rate(double rating){
+        if (rating >= 0 && rating <= 5) {
+            this.rating = rating;
+        }
+    }
+
+} // Class
+
