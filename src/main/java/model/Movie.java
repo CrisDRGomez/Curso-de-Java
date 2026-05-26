@@ -7,15 +7,15 @@ public class Movie {
 
     // Atributos
 
-    public String title;
-    public String description;
-    public int duration; // minutes
-    public String genre;
-    public double rating;
-    public boolean availability;
-    public String producer;
-    public double budget; // usd
-    public LocalDate releaseDate;
+    private String title;
+    private String description;
+    private int duration; // minutes
+    private String genre;
+    private double rating;
+    private boolean availability;
+    private String producer;
+    private double budget; // usd
+    private LocalDate releaseDate;
 
     // Constructor con parámetros
 
@@ -37,10 +37,6 @@ public class Movie {
 
     public String getTitle() {
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getDescription() {
@@ -71,7 +67,7 @@ public class Movie {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(double rating) {
         this.rating = rating;
     }
 

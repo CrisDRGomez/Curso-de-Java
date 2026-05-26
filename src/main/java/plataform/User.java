@@ -76,11 +76,6 @@ public class User {
         return registrationDate;
     }
 
-    public void setRegistrationDate(LocalDateTime registrationDate) {
-        this.registrationDate = registrationDate;
-    }
-
-
     // To String
 
         @Override

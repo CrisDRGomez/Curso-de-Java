@@ -26,9 +26,11 @@ public class Main {
         double rating = ScannerUtils.captureDouble("What´s the rating of the movie you want to watch");
 
         // Instanciamos un objeto nuevo llamado m de la clase Movie desde el constructor vacío
-        Movie m = new Movie(title, duration, genre, rating);
+        Movie movie = new Movie(title, duration, genre, rating);
+        movie.setRating(50.0);
 
-        System.out.println(MovieService.getMovieDetails(m));
+
+        System.out.println(MovieService.getMovieDetails(movie));
 
         /* ====== CASTEO DE TIPOS DE DATOS Y PARSEO DE STRINGS ======
 
